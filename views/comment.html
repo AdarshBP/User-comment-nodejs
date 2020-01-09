@@ -1,0 +1,27 @@
+<html>
+ <head>
+  <title>Comment System </title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+ </head>
+ <body>
+  <br />
+  <h2 align="center"><a href="#">Comment System</a></h2>
+  <br />
+  <div class="container">
+   <form method="POST" class="comment-form" action='/submit'>
+    <div class="form-group">
+     <input type="text" name="comment_name" id="comment_name" class="form-control" placeholder="Enter Name" />
+    </div>
+    <div class="form-group">
+     <textarea name="comment_content" id="comment_content" class="form-control" placeholder="Enter Comment" rows="5"></textarea>
+    </div>
+    <div class="form-group">
+     <input type="submit" name="submit" id="submit" class="btn btn-success btn-block" value="Submit" />
+    </div>
+    <a class="btn btn-primary btn-block" href="/CommentSection" role="button">Read Comment</a>
+   </form>
+  </div>
+ </body>
+</html>

@@ -12,10 +12,10 @@
   <div class="container">
    <form method="POST" class="comment-form" action='/submit'>
     <div class="form-group">
-     <input type="text" name="comment_name" id="comment_name" class="form-control" placeholder="Enter Name" />
+     <input type="text" name="comment_name" id="comment_name" class="form-control" placeholder="Enter Name" required />
     </div>
     <div class="form-group">
-     <textarea name="comment_content" id="comment_content" class="form-control" placeholder="Enter Comment" rows="5"></textarea>
+     <textarea name="comment_content" id="comment_content" class="form-control" placeholder="Enter Comment" rows="5" required></textarea>
     </div>
     <div class="form-group">
      <input type="submit" name="submit" id="submit" class="btn btn-success btn-block" value="Submit" />

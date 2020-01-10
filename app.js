@@ -4,6 +4,7 @@ const bodyParser = require('body-parser');
 const path =require('path');
 
 var app=express();
+app.set('port',(process.env.PORT || 8000))
 app.set('view engine','ejs');
 var data=[];
 app.use(bodyParser.urlencoded({extend:false}));
@@ -29,4 +30,6 @@ app.get('/CommentSection',(req,res)=>{
     res.render(allcommentspath,{data:data});
 });
 //listing to port 3000
-app.listen(3000);
+app.listen(app.get('port'),()=>{
+    console.log('Node app is uprunning om port',app.get('port'));
+});

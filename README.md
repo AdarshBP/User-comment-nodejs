@@ -1,6 +1,6 @@
 # User-comment-nodejs
 
-this is sample comment box using Node and express js 
+This is the sample comment system js application  using Node and express js 
 and it is still in the building phase 
 
 I have deployed it in the Heroku 

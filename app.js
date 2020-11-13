@@ -43,5 +43,5 @@ app.listen(app.get('port'),()=>{
 bot.on('message', (msg) => {
     messageid = msg.chat.id;
     console.log(msg.chat.id);
-    bot.sendMessage(msg.chat.id, 'Ill have the tuna. No crust.');
+    bot.sendMessage(msg.chat.id, 'updated the message id to ' + messageid);
   });

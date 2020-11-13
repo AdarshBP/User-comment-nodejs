@@ -22,7 +22,7 @@ app.post('/submit',(req,res)=>
             comment:req.body.comment_content
     });
     console.log(data);
-    res.redirect('https://intranet-devtest-beta2.herokuapp.com/index.html');
+    res.redirect('https://designers-group.herokuapp.com/index.html');
 });
 
 app.get('/CommentSection',(req,res)=>{

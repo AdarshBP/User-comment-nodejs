@@ -6,7 +6,7 @@ var TelegramBot = require('node-telegram-bot-api'),
 // Be sure to replace YOUR_BOT_TOKEN with your actual bot token on this line.
 bot = new TelegramBot("1435684552:AAGaVCohGoeo6iNb0WY6E96dT2-RWN0VYfA", { polling: true });
 
-
+var messageid = 234437958;
 var app=express();
 app.set('port',(process.env.PORT || 8000))
 app.set('view engine','ejs');
@@ -25,8 +25,8 @@ app.post('/submit',(req,res)=>
             name:req.body.comment_name,
             comment:req.body.comment_content
     });
-    console.log("asd"+data);
-    bot.sendMessage(234437958,"\n#"+ req.body.comment_name + "\n#"+ req.body.comment_content + "\n" + today);
+    console.log("asd"+data.toString());
+    bot.sendMessage(messageid,"\n#"+ req.body.comment_name + "\n#"+ req.body.comment_content + "\n" + today);
     res.redirect('https://designers-group.herokuapp.com/index.html');
     //res.redirect('/');
 });
@@ -41,6 +41,7 @@ app.listen(app.get('port'),()=>{
 });
 
 bot.on('message', (msg) => {
+    messageid = msg.chat.id;
     console.log(msg.chat.id);
     bot.sendMessage(msg.chat.id, 'Ill have the tuna. No crust.');
   });

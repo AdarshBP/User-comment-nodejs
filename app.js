@@ -27,8 +27,8 @@ app.post('/submit',(req,res)=>
     });
     console.log("asd"+data.toString());
     bot.sendMessage(messageid,"\n#"+ req.body.comment_name + "\n#"+ req.body.comment_content + "\n" + today);
-    res.redirect('https://designers-group.herokuapp.com/index.html');
-    //res.redirect('/');
+    //res.redirect('https://designers-group.herokuapp.com/index.html');
+    res.redirect('/');
 });
 
 app.get('/CommentSection',(req,res)=>{

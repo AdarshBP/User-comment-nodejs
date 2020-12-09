@@ -35,6 +35,21 @@ app.get('/CommentSection',(req,res)=>{
     let allcommentspath=path.join(__dirname,'views','allComments.ejs');
     res.render(allcommentspath,{data:data});
 });
+
+app.get('/getFile/:name',(req,res)=>{
+    
+    var fileName = req.params['name'];
+    bot.sendMessage("requested for file data : " + fileName );
+    res.redirect('/');
+});
+
+app.get('/message/:message',(req,res)=>{
+    
+    var fileName = req.params['message'];
+    bot.sendMessage( message );
+    res.redirect('/');
+});
+
 //listing to port 3000
 app.listen(app.get('port'),()=>{
     console.log('Node app is uprunning om port',app.get('port'));

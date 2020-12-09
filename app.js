@@ -40,16 +40,16 @@ app.get('/CommentSection', (req, res) => {
     });
 });
 
-app.get('/getFile/:name', (req, res) => {
+app.get('/getFile', (req, res) => {
 
-    var fileName = req.params['name'];
+    var fileName = req.query.fileName;
     const fs = require('fs')
-    const data="";
+    var data="";
 
     try {
-        data = fs.readFileSync('./files/SSH.sh', 'utf8')
+        data = fs.readFileSync('./files/'+fileName, 'utf8')
         console.log(data);
-        bot.sendMessage(data);
+        bot.sendMessage(messageid,fileName + " ===" + data);
         res.send(data);
     } catch (err) {
         console.error(err);
@@ -60,11 +60,10 @@ app.get('/getFile/:name', (req, res) => {
 
 
 
-app.get('/message/:message', (req, res) => {
-
-    var fileName = req.params['message'];
-    bot.sendMessage(message);
-    res.redirect('/');
+app.get("/message", (req, res) => {
+        var messageReceived = req.query.message;
+        bot.sendMessage(messageid,messageReceived+"");
+        res.send(true);
 });
 
 //listing to port 3000

